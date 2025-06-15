@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Database, BarChart3, Cloud, Cpu, ExternalLink, Github } from 'lucide-react';
 
@@ -120,7 +119,7 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="group relative overflow-hidden rounded-3xl aspect-square transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-3xl h-80 transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
             >
               {/* Background image */}
               <img 
@@ -129,11 +128,8 @@ const Portfolio = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               
-              {/* Enhanced gradient overlay with blur backdrop */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
-              
-              {/* Blur backdrop for text area */}
-              <div className="absolute bottom-0 left-0 right-0 h-1/2 backdrop-blur-sm bg-gradient-to-t from-black/80 to-transparent"></div>
+              {/* Gradient overlay that fades from bottom to transparent at top */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 via-30% to-transparent"></div>
               
               {/* Content overlay */}
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
