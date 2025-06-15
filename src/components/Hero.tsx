@@ -5,18 +5,18 @@ import { ArrowDown, Database, BarChart3 } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-      {/* Purple to orange gradient overlay with better blending */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-600/70 to-orange-500/90"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+      {/* Main vibrant gradient overlay matching the reference */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-700 to-orange-500"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-800/90 via-purple-600/80 to-orange-400/90"></div>
       
       {/* Floating glass cards */}
-      <div className="absolute top-20 right-20 backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-6 animate-float hidden lg:block">
+      <div className="absolute top-20 right-20 backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 animate-float hidden lg:block">
         <Database className="w-8 h-8 text-white mb-2" />
         <div className="text-white text-sm font-medium">Data Processing</div>
         <div className="text-white/70 text-xs">10TB+ Daily</div>
       </div>
       
-      <div className="absolute bottom-32 left-20 backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-6 animate-float hidden lg:block" style={{animationDelay: '1s'}}>
+      <div className="absolute bottom-32 left-20 backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 animate-float hidden lg:block" style={{animationDelay: '1s'}}>
         <BarChart3 className="w-8 h-8 text-white mb-2" />
         <div className="text-white text-sm font-medium">ML Models</div>
         <div className="text-white/70 text-xs">50+ Deployed</div>
@@ -28,9 +28,9 @@ const Hero = () => {
             <div className="text-sm text-white/60 uppercase tracking-wider mb-4">DEV & DESIGN ENGINEERING</div>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white leading-tight">
               John Doe<br />
-              <span className="text-4xl md:text-5xl font-normal text-white/80">Academy</span>
+              <span className="text-4xl md:text-5xl font-normal text-white/90">Academy</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-white/80 max-w-3xl mx-auto leading-relaxed">
               Transforming raw data into actionable insights through scalable pipelines, 
               machine learning solutions, and cloud-native architectures.
             </p>
@@ -54,19 +54,19 @@ const Hero = () => {
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-sm text-white/50 uppercase tracking-wider mb-1">Location</div>
+              <div className="text-sm text-white/60 uppercase tracking-wider mb-1">Location</div>
               <div className="text-white font-medium">San Francisco</div>
             </div>
             <div className="text-center">
-              <div className="text-sm text-white/50 uppercase tracking-wider mb-1">Duration</div>
+              <div className="text-sm text-white/60 uppercase tracking-wider mb-1">Duration</div>
               <div className="text-white font-medium">5 years</div>
             </div>
             <div className="text-center">
-              <div className="text-sm text-white/50 uppercase tracking-wider mb-1">Mentors</div>
+              <div className="text-sm text-white/60 uppercase tracking-wider mb-1">Mentors</div>
               <div className="text-white font-medium">50+</div>
             </div>
             <div className="text-center">
-              <div className="text-sm text-white/50 uppercase tracking-wider mb-1">Courses</div>
+              <div className="text-sm text-white/60 uppercase tracking-wider mb-1">Courses</div>
               <div className="text-white font-medium">25</div>
             </div>
           </div>
@@ -80,8 +80,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom blend for next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+      {/* Smooth transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-black/80"></div>
     </section>
   );
 };

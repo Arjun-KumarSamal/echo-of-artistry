@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Building, Calendar } from 'lucide-react';
 
@@ -31,20 +32,20 @@ const workExperience = [
 const WorkTimeline = () => {
   return (
     <section className="py-20 bg-black relative overflow-hidden">
-      {/* Top blend from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/50 to-transparent"></div>
+      {/* Smooth transition from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/80 to-transparent"></div>
       
-      {/* Indigo to red gradient overlay with better blending */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/80 via-purple-700/70 to-red-600/80"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20"></div>
+      {/* Different gradient for this section */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-700 via-purple-600 to-red-500"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/30"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 backdrop-blur-md bg-white/5 border border-white/10 rounded-full mb-6">
             <Building className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Work Experience</h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 max-w-2xl mx-auto">
             My journey in data engineering and building scalable data solutions
           </p>
           <div className="w-24 h-1 bg-white/30 mx-auto mt-6"></div>
@@ -60,23 +61,23 @@ const WorkTimeline = () => {
               
               <div className="flex items-start gap-8">
                 {/* Timeline dot */}
-                <div className="flex-shrink-0 w-16 h-16 backdrop-blur-sm bg-white/10 border border-white/20 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-16 h-16 backdrop-blur-md bg-white/5 border border-white/10 rounded-full flex items-center justify-center">
                   <Calendar className="w-6 h-6 text-white" />
                 </div>
                 
                 {/* Content */}
-                <div className="flex-1 backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                <div className="flex-1 backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-1">{job.position}</h3>
-                      <h4 className="text-xl text-white/80 font-semibold">{job.company}</h4>
+                      <h4 className="text-xl text-white/90 font-semibold">{job.company}</h4>
                     </div>
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 px-4 py-2 rounded-full text-sm font-medium mt-4 md:mt-0 w-fit">
+                    <div className="backdrop-blur-md bg-white/5 border border-white/10 text-white/90 px-4 py-2 rounded-full text-sm font-medium mt-4 md:mt-0 w-fit">
                       {job.period}
                     </div>
                   </div>
                   
-                  <p className="text-white/70 mb-6 leading-relaxed">
+                  <p className="text-white/80 mb-6 leading-relaxed">
                     {job.description}
                   </p>
                   
@@ -84,7 +85,7 @@ const WorkTimeline = () => {
                     <h5 className="text-white font-semibold text-sm uppercase tracking-wide">Key Achievements</h5>
                     <ul className="space-y-2">
                       {job.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-white/70">
+                        <li key={idx} className="flex items-start gap-3 text-white/80">
                           <div className="w-1.5 h-1.5 bg-white/50 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-sm">{achievement}</span>
                         </li>
@@ -98,8 +99,8 @@ const WorkTimeline = () => {
         </div>
       </div>
 
-      {/* Bottom blend for next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+      {/* Smooth transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-black/80"></div>
     </section>
   );
 };
