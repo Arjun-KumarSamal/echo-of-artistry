@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowDown, Wallet, Shield, Globe } from 'lucide-react';
 
@@ -11,11 +12,15 @@ const Hero = () => {
           backgroundImage: `url('/lovable-uploads/2557aa55-438b-42d0-96ee-bca970aef5e5.png')`
         }}
       >
-        {/* Stronger dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Enhanced dark overlay with more color tint */}
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-slate-900/40"></div>
         
-        {/* Bottom gradient blend for section transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        {/* Extended bottom gradient blend for section transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/90 via-black/60 to-transparent"></div>
+        
+        {/* Additional color tint gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-slate-900/30 to-black/50"></div>
       </div>
 
       {/* Grid pattern overlay - reduced opacity to blend with background */}
