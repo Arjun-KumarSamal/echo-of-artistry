@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, Wallet, Shield, Globe } from 'lucide-react';
 
@@ -14,9 +13,6 @@ const Hero = () => {
       >
         {/* Stronger dark overlay to ensure text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
-        
-        {/* Black blur gradient on sides */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
         
         {/* Bottom gradient blend for section transition */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
