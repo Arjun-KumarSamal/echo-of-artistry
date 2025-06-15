@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Cloud, CloudRain, Sun, Wind } from 'lucide-react';
+import { Cloud, CloudRain, Sun, Wind, MapPin } from 'lucide-react';
 
 const WeatherWidget = () => {
   const [weather, setWeather] = useState({
@@ -23,38 +23,36 @@ const WeatherWidget = () => {
 
   const getWeatherIcon = () => {
     switch (weather.condition) {
-      case 'Sunny': return <Sun className="w-8 h-8 text-yellow-400" />;
-      case 'Rainy': return <CloudRain className="w-8 h-8 text-blue-400" />;
-      default: return <Cloud className="w-8 h-8 text-gray-300" />;
+      case 'Sunny': return <Sun className="w-5 h-5 text-yellow-400" />;
+      case 'Rainy': return <CloudRain className="w-5 h-5 text-blue-400" />;
+      default: return <Cloud className="w-5 h-5 text-gray-300" />;
     }
   };
 
   return (
-    <div className="fixed top-6 right-6 z-50">
-      <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 shadow-2xl">
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <h3 className="text-white font-semibold text-lg">{weather.temp}°C</h3>
-            <p className="text-white/70 text-sm">{weather.condition}</p>
+    <div className="fixed top-6 left-6 z-40">
+      <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-4 shadow-xl max-w-xs">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2">
+            {getWeatherIcon()}
+            <span className="text-white font-semibold text-lg">{weather.temp}°C</span>
           </div>
-          {getWeatherIcon()}
+          <div className="text-white/60 text-xs">
+            {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+          </div>
         </div>
         
-        <div className="space-y-2 text-white/60 text-sm">
-          <div className="flex items-center gap-2">
-            <Wind className="w-4 h-4" />
+        <div className="flex items-center gap-2 text-white/70 text-sm mb-2">
+          <MapPin className="w-3 h-3" />
+          <span>{weather.location}</span>
+        </div>
+        
+        <div className="flex items-center justify-between text-white/60 text-xs">
+          <div className="flex items-center gap-1">
+            <Wind className="w-3 h-3" />
             <span>{weather.windSpeed} km/h</span>
           </div>
-          <div className="text-xs">
-            Humidity: {weather.humidity}%
-          </div>
-        </div>
-        
-        <div className="mt-4 pt-4 border-t border-white/20">
-          <div className="text-white/80 text-sm">{weather.location}</div>
-          <div className="text-white/60 text-xs">
-            {currentTime.toLocaleTimeString()}
-          </div>
+          <span>Humidity: {weather.humidity}%</span>
         </div>
       </div>
     </div>
