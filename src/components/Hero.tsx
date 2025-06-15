@@ -4,9 +4,9 @@ import { ArrowDown, Database, BarChart3 } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900">
-      {/* Subtle overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-blue-900/40"></div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+      {/* Purple to orange gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-purple-600/60 to-orange-500/80"></div>
       
       {/* Floating glass cards */}
       <div className="absolute top-20 right-20 backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6 animate-float hidden lg:block">

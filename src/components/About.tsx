@@ -11,8 +11,8 @@ const skills = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-slate-900/40"></div>
+    <section id="about" className="py-20 relative overflow-hidden bg-black">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-purple-800/60 to-pink-600/70"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -58,7 +58,7 @@ const About = () => {
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
                         <div 
-                          className="h-full bg-white/50 rounded-full transition-all duration-1000 ease-out"
+                          className="h-full bg-gradient-to-r from-purple-400 to-orange-400 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>

@@ -31,8 +31,8 @@ const workExperience = [
 
 const WorkTimeline = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-blue-900/40"></div>
+    <section className="py-20 bg-black relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/70 via-purple-700/60 to-red-600/70"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">

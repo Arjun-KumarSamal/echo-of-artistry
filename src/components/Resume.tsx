@@ -38,8 +38,8 @@ const Resume = () => {
   ];
 
   return (
-    <section id="resume" className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-slate-900/40"></div>
+    <section id="resume" className="py-20 relative overflow-hidden bg-black">
+      <div className="absolute inset-0 bg-gradient-to-br from-green-900/70 via-blue-800/60 to-purple-700/70"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">

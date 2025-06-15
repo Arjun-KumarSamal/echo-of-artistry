@@ -73,79 +73,61 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-950 relative overflow-hidden">
-      {/* Neon glow effects */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-400 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-lime-400 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-4000"></div>
-      </div>
-
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="w-full h-full" style={{
-          backgroundImage: `
-            linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px'
-        }}></div>
-      </div>
+    <section id="portfolio" className="py-20 bg-black relative overflow-hidden">
+      {/* Orange to purple gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-600/70 via-red-700/60 to-purple-900/80"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Header section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-500/20 border-2 border-emerald-400 rounded-full mb-6 shadow-[0_0_30px_rgba(34,197,94,0.5)]">
-            <Database className="w-8 h-8 text-emerald-400" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+            <Database className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-[0_0_10px_rgba(34,197,94,0.3)]">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             My Data Engineering Projects
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
             A showcase of scalable data solutions, ML pipelines, and analytics platforms I've built.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 mx-auto mt-6 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+          <div className="w-24 h-1 bg-white/30 mx-auto mt-6"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="group relative overflow-hidden rounded-2xl h-80 transform hover:-translate-y-2 transition-all duration-500 bg-gradient-to-br from-slate-900/90 to-slate-800/90 border border-emerald-500/30 hover:border-emerald-400/60 shadow-[0_0_20px_rgba(34,197,94,0.1)] hover:shadow-[0_0_40px_rgba(34,197,94,0.3)]"
+              className="group relative overflow-hidden rounded-2xl h-80 transform hover:-translate-y-2 transition-all duration-500 bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20"
             >
-              {/* Neon border glow */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-400/20 via-cyan-400/20 to-lime-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
-              
               {/* Content */}
               <div className="relative z-10 p-6 h-full flex flex-col justify-between">
                 {/* Top section */}
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-emerald-500/20 rounded-lg border border-emerald-400/50 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+                      <div className="p-2 bg-white/10 rounded-lg border border-white/20">
                         {project.icon}
                       </div>
                       <div>
-                        <span className="text-emerald-400 text-xs font-medium uppercase tracking-wider">
+                        <span className="text-white/60 text-xs font-medium uppercase tracking-wider">
                           {project.category}
                         </span>
                       </div>
                     </div>
                     <div className={`px-3 py-1 rounded-full text-xs font-medium border ${
                       project.status === 'Active' 
-                        ? 'bg-emerald-500/20 border-emerald-400/50 text-emerald-400 shadow-[0_0_10px_rgba(34,197,94,0.3)]'
+                        ? 'bg-green-500/20 border-green-400/50 text-green-400'
                         : project.status === 'Completed'
-                        ? 'bg-cyan-500/20 border-cyan-400/50 text-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.3)]'
-                        : 'bg-yellow-500/20 border-yellow-400/50 text-yellow-400 shadow-[0_0_10px_rgba(234,179,8,0.3)]'
+                        ? 'bg-blue-500/20 border-blue-400/50 text-blue-400'
+                        : 'bg-yellow-500/20 border-yellow-400/50 text-yellow-400'
                     }`}>
                       {project.status}
                     </div>
                   </div>
 
-                  <h3 className="text-white text-xl font-bold mb-2 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">
+                  <h3 className="text-white text-xl font-bold mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  <p className="text-white/70 text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
                 </div>
@@ -157,7 +139,7 @@ const Portfolio = () => {
                     {project.tags.slice(0, 3).map((tag, index) => (
                       <span 
                         key={index}
-                        className="bg-slate-800/80 border border-emerald-500/30 text-emerald-300 px-2 py-1 rounded-lg text-xs font-medium shadow-[0_0_5px_rgba(34,197,94,0.2)]"
+                        className="bg-white/10 border border-white/20 text-white/80 px-2 py-1 rounded-lg text-xs font-medium"
                       >
                         {tag}
                       </span>
@@ -166,36 +148,31 @@ const Portfolio = () => {
 
                   {/* Price and actions */}
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-white drop-shadow-[0_0_8px_rgba(34,197,94,0.4)]">
+                    <div className="text-2xl font-bold text-white">
                       {project.price}
                     </div>
                     <div className="flex gap-2">
-                      <button className="w-10 h-10 bg-emerald-500/20 border border-emerald-400/50 rounded-lg flex items-center justify-center hover:bg-emerald-500/30 transition-colors shadow-[0_0_10px_rgba(34,197,94,0.2)] hover:shadow-[0_0_15px_rgba(34,197,94,0.4)]">
-                        <Github className="w-4 h-4 text-emerald-400" />
+                      <button className="w-10 h-10 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                        <Github className="w-4 h-4 text-white" />
                       </button>
-                      <button className="w-10 h-10 bg-emerald-500/20 border border-emerald-400/50 rounded-lg flex items-center justify-center hover:bg-emerald-500/30 transition-colors shadow-[0_0_10px_rgba(34,197,94,0.2)] hover:shadow-[0_0_15px_rgba(34,197,94,0.4)]">
-                        <ExternalLink className="w-4 h-4 text-emerald-400" />
+                      <button className="w-10 h-10 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                        <ExternalLink className="w-4 h-4 text-white" />
                       </button>
                     </div>
                   </div>
 
                   {/* View Details button */}
-                  <button className="w-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/50 text-emerald-400 py-3 rounded-lg font-semibold text-sm hover:from-emerald-500/30 hover:to-cyan-500/30 hover:border-emerald-400/70 transition-all duration-200 shadow-[0_0_15px_rgba(34,197,94,0.2)] hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]">
+                  <button className="w-full bg-white/10 border border-white/20 text-white py-3 rounded-lg font-semibold text-sm hover:bg-white/20 transition-all duration-200">
                     View Details
                   </button>
                 </div>
-              </div>
-
-              {/* Animated border */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-400 via-cyan-400 to-lime-400 opacity-20 animate-pulse"></div>
               </div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border-2 border-emerald-400/50 hover:border-emerald-400/70 text-emerald-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]">
+          <button className="bg-white/10 border border-white/20 hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
             View All Projects on GitHub
           </button>
         </div>

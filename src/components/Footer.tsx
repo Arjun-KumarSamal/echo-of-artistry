@@ -3,8 +3,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 text-white py-12 border-t border-white/10">
-      <div className="container mx-auto px-6">
+    <footer className="bg-black text-white py-12 border-t border-white/10 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/60 to-blue-900/70"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h3 className="text-2xl font-bold text-white">
