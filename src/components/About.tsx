@@ -11,69 +11,54 @@ const skills = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-950 via-cyan-950 to-slate-950">
-      {/* Neon glow effects */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-400 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-emerald-400 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-2000"></div>
-      </div>
-
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="w-full h-full" style={{
-          backgroundImage: `
-            linear-gradient(rgba(34, 211, 238, 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(34, 211, 238, 0.3) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px'
-        }}></div>
-      </div>
+    <section id="about" className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-slate-900/40"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 border-2 border-cyan-400 rounded-full mb-6 shadow-[0_0_30px_rgba(34,211,238,0.5)]">
-              <Database className="w-8 h-8 text-cyan-400" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+              <Database className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]">About Me</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 mx-auto shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
+            <div className="w-24 h-1 bg-white/30 mx-auto"></div>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(34,211,238,0.4)]">Data Engineer & Analytics Specialist</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <h3 className="text-3xl font-bold text-white mb-6">Data Engineer & Analytics Specialist</h3>
+              <p className="text-lg text-white/70 leading-relaxed">
                 I'm a passionate data engineer with 5+ years of experience building scalable data infrastructure 
                 and analytics solutions. I specialize in transforming raw data into actionable insights that drive 
                 business decisions.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-white/70 leading-relaxed">
                 My expertise spans across big data technologies, cloud platforms, and machine learning pipelines. 
                 I've successfully architected systems that process terabytes of data daily, ensuring reliability, 
                 scalability, and optimal performance.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-white/70 leading-relaxed">
                 When I'm not designing data pipelines, you'll find me exploring new technologies, contributing to 
                 open-source projects, or mentoring aspiring data engineers.
               </p>
             </div>
             
             <div className="relative">
-              <div className="backdrop-blur-md bg-slate-900/80 border-2 border-cyan-400/50 rounded-2xl p-8 shadow-[0_0_30px_rgba(34,211,238,0.3)]">
-                <h4 className="text-xl font-bold text-white mb-6 drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]">Core Skills</h4>
+              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
+                <h4 className="text-xl font-bold text-white mb-6">Core Skills</h4>
                 <div className="space-y-4">
                   {skills.map((skill, index) => (
                     <div key={index} className="space-y-2">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <div className="text-cyan-400">{skill.icon}</div>
+                          <div className="text-white">{skill.icon}</div>
                           <span className="font-medium text-white">{skill.name}</span>
                         </div>
-                        <span className="text-sm font-semibold text-gray-300">{skill.level}%</span>
+                        <span className="text-sm font-semibold text-white/70">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden border border-cyan-400/20">
+                      <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
                         <div 
-                          className="h-full bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+                          className="h-full bg-white/50 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>
@@ -81,27 +66,25 @@ const About = () => {
                   ))}
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full opacity-20 blur-sm"></div>
-              <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-r from-lime-400 to-yellow-400 rounded-full opacity-30 blur-sm"></div>
             </div>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center backdrop-blur-md bg-slate-900/80 border-2 border-cyan-400/50 rounded-2xl p-6 shadow-[0_0_20px_rgba(34,211,238,0.2)]">
-              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-2 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">100TB+</div>
-              <div className="text-gray-300">Data Processed Daily</div>
+            <div className="text-center backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="text-3xl font-bold text-white mb-2">100TB+</div>
+              <div className="text-white/70">Data Processed Daily</div>
             </div>
-            <div className="text-center backdrop-blur-md bg-slate-900/80 border-2 border-cyan-400/50 rounded-2xl p-6 shadow-[0_0_20px_rgba(34,211,238,0.2)]">
-              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-2 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">50+</div>
-              <div className="text-gray-300">ML Models Deployed</div>
+            <div className="text-center backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-white/70">ML Models Deployed</div>
             </div>
-            <div className="text-center backdrop-blur-md bg-slate-900/80 border-2 border-cyan-400/50 rounded-2xl p-6 shadow-[0_0_20px_rgba(34,211,238,0.2)]">
-              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-2 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">5+</div>
-              <div className="text-gray-300">Years Experience</div>
+            <div className="text-center backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="text-3xl font-bold text-white mb-2">5+</div>
+              <div className="text-white/70">Years Experience</div>
             </div>
-            <div className="text-center backdrop-blur-md bg-slate-900/80 border-2 border-cyan-400/50 rounded-2xl p-6 shadow-[0_0_20px_rgba(34,211,238,0.2)]">
-              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-2 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">99.9%</div>
-              <div className="text-gray-300">System Uptime</div>
+            <div className="text-center backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-white/70">System Uptime</div>
             </div>
           </div>
         </div>
