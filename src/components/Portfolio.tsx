@@ -1,73 +1,84 @@
-
 import React from 'react';
 import { Database, BarChart3, Cloud, Cpu, ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
-    title: "Real-time Analytics Platform",
+    title: "Swiss Alps Data Center",
+    subtitle: "Real-time Analytics Platform",
     description: "Built a streaming analytics platform processing 10TB+ daily data using Kafka, Spark, and Redis for real-time insights.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
     tags: ["Apache Kafka", "Spark Streaming", "Redis", "Python"],
     category: "Big Data",
     icon: <BarChart3 className="w-6 h-6" />,
     price: "$750K",
-    metrics: "10TB+ Daily"
+    duration: "Luxury Stay",
+    period: "2 Day stay"
   },
   {
     id: 2,
-    title: "ML Pipeline Automation",
+    title: "Iceland ML Hub",
+    subtitle: "ML Pipeline Automation", 
     description: "Automated end-to-end machine learning pipeline with model training, validation, and deployment on AWS SageMaker.",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop",
     tags: ["MLOps", "AWS SageMaker", "Docker", "Kubernetes"],
     category: "Machine Learning",
     icon: <Cpu className="w-6 h-6" />,
     price: "$1.2M",
-    metrics: "50+ Models"
+    duration: "Top Rated",
+    period: "6 Day stay"
   },
   {
     id: 3,
-    title: "Data Lake Architecture",
+    title: "Tokyo Cloud Suite",
+    subtitle: "Data Lake Architecture",
     description: "Designed and implemented a scalable data lake on AWS S3 with automated ETL pipelines using Apache Airflow.",
     image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
     tags: ["AWS S3", "Apache Airflow", "ETL", "Data Modeling"],
-    category: "Cloud Infrastructure",
+    category: "Cloud Infrastructure", 
     icon: <Cloud className="w-6 h-6" />,
     price: "$890K",
-    metrics: "99.9% Uptime"
+    duration: "Cityscape View",
+    period: "Weekend Stay"
   },
   {
     id: 4,
-    title: "Customer Analytics Dashboard",
+    title: "Nordic Analytics",
+    subtitle: "Customer Analytics Dashboard",
     description: "Built interactive analytics dashboard using React and D3.js, connected to real-time data warehouse for business insights.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
     tags: ["React", "D3.js", "PostgreSQL", "FastAPI"],
     category: "Data Visualization",
     icon: <BarChart3 className="w-6 h-6" />,
     price: "$450K",
-    metrics: "Real-time Insights"
+    duration: "Real-time",
+    period: "Live Data"
   },
   {
     id: 5,
-    title: "Distributed Data Processing",
+    title: "Mountain Processing",
+    subtitle: "Distributed Data Processing",
     description: "Optimized data processing workflows using Apache Spark on EMR, reducing processing time by 70% and costs by 40%.",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop",
     tags: ["Apache Spark", "AWS EMR", "Scala", "Performance Optimization"],
     category: "Performance Engineering",
     icon: <Database className="w-6 h-6" />,
     price: "$680K",
-    metrics: "70% Faster"
+    duration: "High Performance",
+    period: "70% Faster"
   },
   {
     id: 6,
-    title: "IoT Data Pipeline",
+    title: "Desert IoT Station",
+    subtitle: "IoT Data Pipeline",
     description: "Developed IoT data ingestion pipeline handling millions of sensor events per second with Apache Pulsar and ClickHouse.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
     tags: ["IoT", "Apache Pulsar", "ClickHouse", "Time Series"],
     category: "IoT & Sensors",
     icon: <Cpu className="w-6 h-6" />,
     price: "$950K",
-    metrics: "Million Events/sec"
+    duration: "Ultra Scale",
+    period: "Million Events/sec"
   }
 ];
 
@@ -92,6 +103,7 @@ const Portfolio = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
+        {/* Header section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 backdrop-blur-md bg-white/10 border border-white/20 rounded-full mb-6">
             <Database className="w-8 h-8 text-white" />
@@ -107,64 +119,77 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="group backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl overflow-hidden hover:bg-white/15 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-3xl h-96 transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
             >
-              <div className="relative overflow-hidden h-48">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                
-                {/* Category badge */}
-                <div className="absolute top-4 left-4 backdrop-blur-sm bg-white/20 border border-white/30 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-2">
-                  {project.icon}
-                  {project.category}
+              {/* Background image */}
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              
+              {/* Content overlay */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                {/* Top section with badges */}
+                <div className="flex justify-between items-start">
+                  <div className="flex items-center gap-2 text-white text-xs font-medium">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <div className="text-white text-lg font-bold">
+                    {project.price}
+                  </div>
                 </div>
 
-                {/* Metrics badge */}
-                <div className="absolute top-4 right-4 backdrop-blur-sm bg-purple-600/80 border border-purple-400/30 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  {project.metrics}
-                </div>
+                {/* Bottom section with content */}
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-white text-xl font-bold mb-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {project.description.split('.')[0]}.
+                    </p>
+                  </div>
 
-                {/* Action buttons */}
-                <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="w-8 h-8 backdrop-blur-sm bg-white/20 border border-white/30 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <Github className="w-4 h-4 text-white" />
-                  </button>
-                  <button className="w-8 h-8 backdrop-blur-sm bg-white/20 border border-white/30 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <ExternalLink className="w-4 h-4 text-white" />
+                  {/* Duration and period tags */}
+                  <div className="flex justify-between items-center text-white text-xs">
+                    <span className="font-medium">{project.duration}</span>
+                    <span className="opacity-75">{project.period}</span>
+                  </div>
+
+                  {/* Reserve button */}
+                  <button className="w-full bg-white text-black py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors duration-200">
+                    Reserve
                   </button>
                 </div>
               </div>
-              
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <div className="text-purple-300 font-bold text-sm">{project.price}</div>
-                </div>
-                
-                <p className="text-gray-300 mb-4 leading-relaxed text-sm">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.slice(0, 3).map((tag, index) => (
-                    <span 
-                      key={index}
-                      className="backdrop-blur-sm bg-white/10 border border-white/20 text-gray-300 px-2 py-1 rounded-lg text-xs font-medium hover:bg-purple-500/20 hover:text-purple-300 transition-colors"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                  {project.tags.length > 3 && (
-                    <span className="text-purple-300 text-xs font-medium px-2 py-1">
-                      +{project.tags.length - 3} more
-                    </span>
-                  )}
+
+              {/* Hover overlay with additional info */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="text-center space-y-4">
+                  <div className="flex justify-center gap-4">
+                    <button className="w-12 h-12 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                      <Github className="w-5 h-5 text-white" />
+                    </button>
+                    <button className="w-12 h-12 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                      <ExternalLink className="w-5 h-5 text-white" />
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap justify-center gap-2 px-4">
+                    {project.tags.slice(0, 3).map((tag, index) => (
+                      <span 
+                        key={index}
+                        className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-3 py-1 rounded-full text-xs font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
