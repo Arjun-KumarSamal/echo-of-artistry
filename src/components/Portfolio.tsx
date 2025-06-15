@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Wallet, BarChart3, Shield, Cpu, ExternalLink, Github } from 'lucide-react';
 

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { GraduationCap, Award, Calendar, MapPin } from 'lucide-react';
 
