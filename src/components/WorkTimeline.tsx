@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Building, Calendar } from 'lucide-react';
 
@@ -32,7 +31,12 @@ const workExperience = [
 const WorkTimeline = () => {
   return (
     <section className="py-20 bg-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/70 via-purple-700/60 to-red-600/70"></div>
+      {/* Top blend from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/50 to-transparent"></div>
+      
+      {/* Indigo to red gradient overlay with better blending */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/80 via-purple-700/70 to-red-600/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
@@ -93,6 +97,9 @@ const WorkTimeline = () => {
           ))}
         </div>
       </div>
+
+      {/* Bottom blend for next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
     </section>
   );
 };

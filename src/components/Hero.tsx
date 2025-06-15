@@ -5,17 +5,18 @@ import { ArrowDown, Database, BarChart3 } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-      {/* Purple to orange gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-purple-600/60 to-orange-500/80"></div>
+      {/* Purple to orange gradient overlay with better blending */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-600/70 to-orange-500/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
       
       {/* Floating glass cards */}
-      <div className="absolute top-20 right-20 backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6 animate-float hidden lg:block">
+      <div className="absolute top-20 right-20 backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-6 animate-float hidden lg:block">
         <Database className="w-8 h-8 text-white mb-2" />
         <div className="text-white text-sm font-medium">Data Processing</div>
         <div className="text-white/70 text-xs">10TB+ Daily</div>
       </div>
       
-      <div className="absolute bottom-32 left-20 backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6 animate-float hidden lg:block" style={{animationDelay: '1s'}}>
+      <div className="absolute bottom-32 left-20 backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-6 animate-float hidden lg:block" style={{animationDelay: '1s'}}>
         <BarChart3 className="w-8 h-8 text-white mb-2" />
         <div className="text-white text-sm font-medium">ML Models</div>
         <div className="text-white/70 text-xs">50+ Deployed</div>
@@ -78,6 +79,9 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
+
+      {/* Bottom blend for next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
     </section>
   );
 };

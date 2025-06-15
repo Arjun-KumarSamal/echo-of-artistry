@@ -1,10 +1,13 @@
-
 import React from 'react';
 
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 border-t border-white/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/60 to-blue-900/70"></div>
+      {/* Top blend from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black via-black/50 to-transparent"></div>
+      
+      {/* Footer gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-purple-900/70 to-blue-900/80"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">

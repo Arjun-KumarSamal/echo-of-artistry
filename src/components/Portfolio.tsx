@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Database, BarChart3, Cloud, Cpu, ExternalLink, Github } from 'lucide-react';
 
@@ -74,8 +73,12 @@ const projects = [
 const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 bg-black relative overflow-hidden">
-      {/* Orange to purple gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-600/70 via-red-700/60 to-purple-900/80"></div>
+      {/* Top blend from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/50 to-transparent"></div>
+      
+      {/* Orange to purple gradient overlay with better blending */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-600/80 via-red-700/70 to-purple-900/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Header section */}
@@ -177,6 +180,9 @@ const Portfolio = () => {
           </button>
         </div>
       </div>
+
+      {/* Bottom blend for next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
     </section>
   );
 };

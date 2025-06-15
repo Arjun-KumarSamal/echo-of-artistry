@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Database, Code, BarChart3, Cloud } from 'lucide-react';
 
@@ -12,7 +11,12 @@ const skills = [
 const About = () => {
   return (
     <section id="about" className="py-20 relative overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-purple-800/60 to-pink-600/70"></div>
+      {/* Top blend from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/50 to-transparent"></div>
+      
+      {/* Blue to pink gradient overlay with better blending */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-purple-800/70 to-pink-600/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -89,6 +93,9 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* Bottom blend for next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
     </section>
   );
 };
