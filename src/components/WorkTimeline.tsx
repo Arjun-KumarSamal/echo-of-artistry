@@ -31,8 +31,28 @@ const workExperience = [
 
 const WorkTimeline = () => {
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800">
-      {/* Grid pattern background */}
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/4bfefdbc-ea59-4c1b-bde0-1b7badecdcab.png')`
+        }}
+      >
+        {/* Stronger dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        
+        {/* Black blur gradient on sides */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
+        
+        {/* Top gradient blend for section transition */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-slate-900/80 via-slate-900/40 to-transparent"></div>
+        
+        {/* Bottom gradient blend for next section transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+      </div>
+
+      {/* Grid pattern overlay - reduced opacity to blend with background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `
