@@ -1,69 +1,72 @@
 
 import React from 'react';
-import { Database, Code, BarChart3, Cloud } from 'lucide-react';
+import { Wallet, Code, BarChart3, Shield } from 'lucide-react';
 
 const skills = [
-  { name: "Python", level: 95, icon: <Code className="w-5 h-5" /> },
-  { name: "SQL", level: 90, icon: <Database className="w-5 h-5" /> },
-  { name: "Apache Spark", level: 85, icon: <BarChart3 className="w-5 h-5" /> },
-  { name: "AWS/GCP", level: 88, icon: <Cloud className="w-5 h-5" /> }
+  { name: "Blockchain Development", level: 95, icon: <Code className="w-5 h-5" /> },
+  { name: "Smart Contracts", level: 90, icon: <Wallet className="w-5 h-5" /> },
+  { name: "DeFi Protocols", level: 85, icon: <BarChart3 className="w-5 h-5" /> },
+  { name: "Web3 Security", level: 88, icon: <Shield className="w-5 h-5" /> }
 ];
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative overflow-hidden bg-black">
-      {/* Smooth transition from hero */}
-      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/80 to-transparent"></div>
-      
-      {/* Main gradient continuing the theme */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-800 via-purple-700 to-pink-600"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/30"></div>
+    <section id="about" className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800">
+      {/* Grid pattern background */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 backdrop-blur-md bg-white/5 border border-white/10 rounded-full mb-6">
-              <Database className="w-8 h-8 text-white" />
+            <div className="inline-flex items-center justify-center w-16 h-16 backdrop-blur-sm bg-blue-500/10 border border-blue-400/30 rounded-xl mb-6">
+              <Wallet className="w-8 h-8 text-blue-400" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
-            <div className="w-24 h-1 bg-white/30 mx-auto"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Our Platform</h2>
+            <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white mb-6">Data Engineer & Analytics Specialist</h3>
-              <p className="text-lg text-white/80 leading-relaxed">
-                I'm a passionate data engineer with 5+ years of experience building scalable data infrastructure 
-                and analytics solutions. I specialize in transforming raw data into actionable insights that drive 
-                business decisions.
+              <h3 className="text-3xl font-bold text-white mb-6">Web3 & Blockchain Specialist</h3>
+              <p className="text-lg text-slate-300 leading-relaxed">
+                We're pioneering the future of decentralized finance with 5+ years of experience building 
+                secure blockchain solutions and innovative DeFi protocols that empower users worldwide.
               </p>
-              <p className="text-lg text-white/80 leading-relaxed">
-                My expertise spans across big data technologies, cloud platforms, and machine learning pipelines. 
-                I've successfully architected systems that process terabytes of data daily, ensuring reliability, 
-                scalability, and optimal performance.
+              <p className="text-lg text-slate-300 leading-relaxed">
+                Our expertise spans across smart contract development, wallet integrations, and 
+                cross-chain protocols. We've successfully deployed solutions that handle millions 
+                in transaction volume with enterprise-grade security.
               </p>
-              <p className="text-lg text-white/80 leading-relaxed">
-                When I'm not designing data pipelines, you'll find me exploring new technologies, contributing to 
-                open-source projects, or mentoring aspiring data engineers.
+              <p className="text-lg text-slate-300 leading-relaxed">
+                When we're not building the next generation of Web3 infrastructure, we're contributing to 
+                open-source protocols and educating the community about blockchain technology.
               </p>
             </div>
             
             <div className="relative">
-              <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8">
-                <h4 className="text-xl font-bold text-white mb-6">Core Skills</h4>
+              <div className="backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8">
+                <h4 className="text-xl font-bold text-white mb-6">Core Expertise</h4>
                 <div className="space-y-4">
                   {skills.map((skill, index) => (
                     <div key={index} className="space-y-2">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <div className="text-white">{skill.icon}</div>
+                          <div className="text-blue-400">{skill.icon}</div>
                           <span className="font-medium text-white">{skill.name}</span>
                         </div>
-                        <span className="text-sm font-semibold text-white/70">{skill.level}%</span>
+                        <span className="text-sm font-semibold text-slate-400">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
                         <div 
-                          className="h-full bg-gradient-to-r from-purple-400 to-orange-400 rounded-full transition-all duration-1000 ease-out"
+                          className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>
@@ -75,28 +78,25 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6">
-              <div className="text-3xl font-bold text-white mb-2">100TB+</div>
-              <div className="text-white/80">Data Processed Daily</div>
+            <div className="text-center backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6">
+              <div className="text-3xl font-bold text-white mb-2">$50M+</div>
+              <div className="text-slate-400">Total Value Locked</div>
             </div>
-            <div className="text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6">
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-white/80">ML Models Deployed</div>
+            <div className="text-center backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6">
+              <div className="text-3xl font-bold text-white mb-2">100+</div>
+              <div className="text-slate-400">Smart Contracts</div>
             </div>
-            <div className="text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div className="text-center backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6">
               <div className="text-3xl font-bold text-white mb-2">5+</div>
-              <div className="text-white/80">Years Experience</div>
+              <div className="text-slate-400">Years Experience</div>
             </div>
-            <div className="text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div className="text-center backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6">
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-white/80">System Uptime</div>
+              <div className="text-slate-400">Uptime</div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Smooth transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-black/80"></div>
     </section>
   );
 };

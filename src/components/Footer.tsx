@@ -3,33 +3,37 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 border-t border-white/10 relative overflow-hidden">
-      {/* Smooth transition from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/80 to-transparent"></div>
+    <footer className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800 border-t border-slate-700/50">
+      {/* Grid pattern background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
       
-      {/* Final gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-purple-800 to-orange-600"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h3 className="text-2xl font-bold text-white">
-              John Doe
+              Web3 Solutions
             </h3>
-            <p className="text-white/80 mt-1">Data Engineer & Analytics Specialist</p>
+            <p className="text-slate-300 mt-1">Blockchain Engineer & DeFi Specialist</p>
           </div>
           
           <div className="flex space-x-6">
-            <a href="#about" className="text-white/80 hover:text-white transition-colors">About</a>
-            <a href="#portfolio" className="text-white/80 hover:text-white transition-colors">Work</a>
-            <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
+            <a href="#about" className="text-slate-300 hover:text-blue-400 transition-colors">About</a>
+            <a href="#portfolio" className="text-slate-300 hover:text-blue-400 transition-colors">Projects</a>
+            <a href="#contact" className="text-slate-300 hover:text-blue-400 transition-colors">Contact</a>
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-8 pt-8 text-center">
-          <p className="text-white/80">
-            © 2024 John Doe. All rights reserved. Made with <span className="text-white">❤️</span> and lots of coffee.
+        <div className="border-t border-slate-700/50 mt-8 pt-8 text-center">
+          <p className="text-slate-400">
+            © 2024 Web3 Solutions. All rights reserved. Built with <span className="text-blue-400">⚡</span> and blockchain technology.
           </p>
         </div>
       </div>
