@@ -4,9 +4,20 @@ import { ArrowDown, Wallet, Shield, Globe } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800">
-      {/* Grid pattern background */}
-      <div className="absolute inset-0 opacity-20">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/2557aa55-438b-42d0-96ee-bca970aef5e5.png')`
+        }}
+      >
+        {/* Dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+
+      {/* Grid pattern overlay - reduced opacity to blend with background */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
