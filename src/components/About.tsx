@@ -19,8 +19,8 @@ const About = () => {
           backgroundImage: `url('/lovable-uploads/3023344f-0f63-42e5-9b90-465bb85ef2c8.png')`
         }}
       >
-        {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Stronger dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
         
         {/* Black blur gradient on sides */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>

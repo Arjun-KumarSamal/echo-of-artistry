@@ -12,8 +12,8 @@ const Hero = () => {
           backgroundImage: `url('/lovable-uploads/2557aa55-438b-42d0-96ee-bca970aef5e5.png')`
         }}
       >
-        {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Stronger dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
         
         {/* Black blur gradient on sides */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
