@@ -23,44 +23,45 @@ const EnhancedContact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background image with overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&h=1080&fit=crop')`
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/90 to-slate-900/95"></div>
+    <section id="contact" className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+      {/* Neon glow effects */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-400 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-400 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-2000"></div>
       </div>
 
-      {/* Background effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="w-full h-full" style={{
+          backgroundImage: `
+            linear-gradient(rgba(168, 85, 247, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(168, 85, 247, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 backdrop-blur-md bg-white/10 border border-white/20 rounded-full mb-6">
-            <Coffee className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500/20 border-2 border-purple-400 rounded-full mb-6 shadow-[0_0_30px_rgba(168,85,247,0.5)]">
+            <Coffee className="w-8 h-8 text-purple-400" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Let's Create Something Amazing</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-[0_0_10px_rgba(168,85,247,0.3)]">Let's Create Something Amazing</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Ready to transform your data challenges into innovative solutions? Let's discuss your next project.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mt-6 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
         </div>
 
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+            <div className="backdrop-blur-md bg-slate-900/80 border-2 border-purple-400/50 rounded-2xl p-8 shadow-[0_0_25px_rgba(168,85,247,0.2)]">
+              <h3 className="text-2xl font-bold text-white mb-6 drop-shadow-[0_0_5px_rgba(168,85,247,0.4)]">Get In Touch</h3>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 backdrop-blur-md bg-white/10 border border-white/20 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-purple-300" />
+                  <div className="w-12 h-12 backdrop-blur-md bg-purple-500/20 border-2 border-purple-400/50 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                    <Mail className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
                     <div className="text-white font-semibold">Email</div>
@@ -68,8 +69,8 @@ const EnhancedContact = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 backdrop-blur-md bg-white/10 border border-white/20 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-purple-300" />
+                  <div className="w-12 h-12 backdrop-blur-md bg-purple-500/20 border-2 border-purple-400/50 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                    <Phone className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
                     <div className="text-white font-semibold">Phone</div>
@@ -77,8 +78,8 @@ const EnhancedContact = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 backdrop-blur-md bg-white/10 border border-white/20 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-purple-300" />
+                  <div className="w-12 h-12 backdrop-blur-md bg-purple-500/20 border-2 border-purple-400/50 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                    <MapPin className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
                     <div className="text-white font-semibold">Location</div>
@@ -88,23 +89,23 @@ const EnhancedContact = () => {
               </div>
             </div>
 
-            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-white mb-4">Why Work With Me?</h3>
+            <div className="backdrop-blur-md bg-slate-900/80 border-2 border-purple-400/50 rounded-2xl p-8 shadow-[0_0_25px_rgba(168,85,247,0.2)]">
+              <h3 className="text-xl font-bold text-white mb-4 drop-shadow-[0_0_3px_rgba(168,85,247,0.4)]">Why Work With Me?</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(168,85,247,0.7)]"></div>
                   <span>5+ years of proven expertise in data engineering</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(168,85,247,0.7)]"></div>
                   <span>Experience with Fortune 500 companies</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(168,85,247,0.7)]"></div>
                   <span>End-to-end project management</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(168,85,247,0.7)]"></div>
                   <span>Scalable and maintainable solutions</span>
                 </li>
               </ul>
@@ -112,10 +113,10 @@ const EnhancedContact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8">
+          <div className="backdrop-blur-md bg-slate-900/80 border-2 border-purple-400/50 rounded-2xl p-8 shadow-[0_0_25px_rgba(168,85,247,0.2)]">
             <div className="flex items-center gap-3 mb-6">
-              <Calendar className="w-6 h-6 text-purple-300" />
-              <h3 className="text-2xl font-bold text-white">Schedule a Consultation</h3>
+              <Calendar className="w-6 h-6 text-purple-400" />
+              <h3 className="text-2xl font-bold text-white drop-shadow-[0_0_5px_rgba(168,85,247,0.4)]">Schedule a Consultation</h3>
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -128,7 +129,7 @@ const EnhancedContact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 backdrop-blur-md bg-purple-500/20 border-2 border-purple-400/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.2)]"
                     placeholder="Your name"
                     required
                   />
@@ -141,7 +142,7 @@ const EnhancedContact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 backdrop-blur-md bg-purple-500/20 border-2 border-purple-400/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.2)]"
                     placeholder="your.email@example.com"
                     required
                   />
@@ -156,7 +157,7 @@ const EnhancedContact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 backdrop-blur-md bg-purple-500/20 border-2 border-purple-400/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.2)]"
                   placeholder="Project consultation"
                   required
                 />
@@ -170,7 +171,7 @@ const EnhancedContact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full px-4 py-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 backdrop-blur-md bg-purple-500/20 border-2 border-purple-400/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 resize-none shadow-[0_0_10px_rgba(168,85,247,0.2)]"
                   placeholder="Tell me about your data engineering needs..."
                   required
                 ></textarea>
@@ -178,7 +179,7 @@ const EnhancedContact = () => {
               
               <button
                 type="submit"
-                className="w-full backdrop-blur-md bg-purple-600/80 hover:bg-purple-700/80 border border-purple-400/30 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-purple-500/80 to-pink-500/80 border-2 border-purple-400/50 hover:border-purple-400/70 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-[1.02] shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 Send Message
