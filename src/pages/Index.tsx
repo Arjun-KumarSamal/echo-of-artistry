@@ -7,12 +7,10 @@ import WorkTimeline from '@/components/WorkTimeline';
 import Resume from '@/components/Resume';
 import EnhancedContact from '@/components/EnhancedContact';
 import Footer from '@/components/Footer';
-import WeatherWidget from '@/components/WeatherWidget';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <WeatherWidget />
       <Hero />
       <About />
       <WorkTimeline />
