@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Database, BarChart3, Cloud, Cpu, ExternalLink, Github } from 'lucide-react';
 
@@ -119,7 +120,7 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="group relative overflow-hidden rounded-3xl h-96 transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-3xl aspect-square transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
             >
               {/* Background image */}
               <img 
@@ -128,8 +129,11 @@ const Portfolio = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              {/* Enhanced gradient overlay with blur backdrop */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
+              
+              {/* Blur backdrop for text area */}
+              <div className="absolute bottom-0 left-0 right-0 h-1/2 backdrop-blur-sm bg-gradient-to-t from-black/80 to-transparent"></div>
               
               {/* Content overlay */}
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
@@ -140,37 +144,37 @@ const Portfolio = () => {
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
-                  <div className="text-white text-lg font-bold">
+                  <div className="text-white text-lg font-bold backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full">
                     {project.price}
                   </div>
                 </div>
 
                 {/* Bottom section with content */}
-                <div className="space-y-4">
+                <div className="space-y-4 relative z-10">
                   <div>
-                    <h3 className="text-white text-xl font-bold mb-1">
+                    <h3 className="text-white text-xl font-bold mb-1 drop-shadow-lg">
                       {project.title}
                     </h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-200 text-sm leading-relaxed drop-shadow-md">
                       {project.description.split('.')[0]}.
                     </p>
                   </div>
 
                   {/* Duration and period tags */}
                   <div className="flex justify-between items-center text-white text-xs">
-                    <span className="font-medium">{project.duration}</span>
-                    <span className="opacity-75">{project.period}</span>
+                    <span className="font-medium drop-shadow-md">{project.duration}</span>
+                    <span className="opacity-90 drop-shadow-md">{project.period}</span>
                   </div>
 
                   {/* Reserve button */}
-                  <button className="w-full bg-white text-black py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors duration-200">
+                  <button className="w-full bg-white text-black py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                     Reserve
                   </button>
                 </div>
               </div>
 
               {/* Hover overlay with additional info */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
                 <div className="text-center space-y-4">
                   <div className="flex justify-center gap-4">
                     <button className="w-12 h-12 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
