@@ -11,8 +11,19 @@ const skills = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800">
-      {/* Grid pattern background */}
+    <section id="about" className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/3023344f-0f63-42e5-9b90-465bb85ef2c8.png')`
+        }}
+      >
+        {/* Dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      {/* Grid pattern overlay - reduced opacity to blend with background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `
