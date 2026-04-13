@@ -34,7 +34,7 @@ const WorkTimeline = () => {
       {/* Decorative gradient overlay */}
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
-      
+
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -45,7 +45,7 @@ const WorkTimeline = () => {
           backgroundSize: '60px 60px'
         }}></div>
       </div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-fuchsia-500 to-purple-600 rounded-2xl shadow-xl shadow-fuchsia-500/20 mb-8 transform -rotate-6 hover:rotate-0 transition-transform duration-300">
@@ -57,6 +57,7 @@ const WorkTimeline = () => {
           </p>
         </div>
 
+
         <div className="max-w-4xl mx-auto">
           {workExperience.map((job, index) => (
             <div key={job.id} className="relative mb-16 last:mb-0 group">
@@ -64,13 +65,13 @@ const WorkTimeline = () => {
               {index !== workExperience.length - 1 && (
                 <div className="absolute left-10 top-24 bottom-[-4rem] w-[2px] bg-gradient-to-b from-fuchsia-500 to-purple-900 group-hover:from-fuchsia-400 group-hover:to-fuchsia-600 transition-colors duration-500 hidden md:block"></div>
               )}
-              
+
               <div className="flex flex-col md:flex-row items-start gap-8">
                 {/* Timeline dot */}
                 <div className="hidden md:flex flex-shrink-0 w-20 h-20 bg-black border-4 border-fuchsia-500 rounded-full items-center justify-center relative z-10 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-fuchsia-500/20">
                   <span className="text-fuchsia-500 font-bold text-lg">0{index + 1}</span>
                 </div>
-                
+
                 {/* Content */}
                 <div className="flex-1 backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
@@ -86,11 +87,11 @@ const WorkTimeline = () => {
                       {job.period}
                     </div>
                   </div>
-                  
+
                   <p className="text-purple-100/70 mb-8 leading-relaxed text-lg font-light">
                     {job.description}
                   </p>
-                  
+
                   <div className="space-y-4 bg-black/30 rounded-2xl p-6 border border-white/5">
                     <h5 className="text-white font-bold text-sm uppercase tracking-widest flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-fuchsia-500"></div> Key Achievements
