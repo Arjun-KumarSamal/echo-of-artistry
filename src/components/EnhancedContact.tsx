@@ -65,7 +65,7 @@ const EnhancedContact = () => {
                   </div>
                   <div>
                     <div className="text-amber-100/60 font-medium text-sm tracking-widest uppercase mb-1">Email</div>
-                    <div className="text-white text-xl font-semibold">hello@janedoe.com</div>
+                    <div className="text-white text-xl font-semibold">arjun.samal@example.com</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group cursor-pointer hover:bg-white/5 p-4 rounded-2xl transition-colors -ml-4">
@@ -91,11 +91,21 @@ const EnhancedContact = () => {
 
             <div className="backdrop-blur-md bg-transparent border border-white/10 rounded-[2.5rem] p-10">
               <h3 className="text-2xl font-bold text-white mb-6">Socials</h3>
-              <div className="flex gap-4">
-                {['LinkedIn', 'GitHub', 'Twitter', 'Dribbble'].map((social) => (
-                  <button key={social} className="px-6 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white hover:text-black transition-colors duration-300">
-                    {social}
-                  </button>
+              <div className="flex flex-wrap gap-4">
+                {[
+                  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/arjun-kumar-samal/' },
+                  { name: 'GitHub', url: '#' },
+                  { name: 'Twitter', url: '#' }
+                ].map((social) => (
+                  <a 
+                    key={social.name} 
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white hover:text-black transition-colors duration-300"
+                  >
+                    {social.name}
+                  </a>
                 ))}
               </div>
             </div>
@@ -118,7 +128,7 @@ const EnhancedContact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-6 py-4 bg-black/40 border border-white/10 rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all"
-                    placeholder="Jane Doe"
+                    placeholder="Arjun Kumar Samal"
                     required
                   />
                 </div>

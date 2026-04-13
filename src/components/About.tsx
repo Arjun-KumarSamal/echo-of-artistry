@@ -26,7 +26,7 @@ const About = () => {
             <div className="space-y-8">
               <h3 className="text-4xl font-bold text-white mb-6">Software Engineer & Designer</h3>
               <p className="text-xl text-teal-100/70 leading-relaxed font-light">
-                Hello! I'm Jane, a passionate developer who loves transforming complex problems into simple, beautiful, and intuitive designs. Based in San Francisco, I've spent the last half-decade building digital products.
+                Hello! I'm Arjun, a passionate developer who loves transforming complex problems into simple, beautiful, and intuitive designs. Based in San Francisco, I've spent the last half-decade building digital products.
               </p>
               <p className="text-xl text-teal-100/70 leading-relaxed font-light">
                 My journey in web development started back in 2018 when I built a small app for local businesses. Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, and a huge corporation.

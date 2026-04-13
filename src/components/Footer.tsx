@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-orange-400 mb-2">
-              Jane Doe
+              Arjun Kumar Samal
             </h3>
             <p className="text-amber-100/60 font-light">Creative Technologist & Developer</p>
           </div>
@@ -26,7 +26,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center">
           <p className="text-amber-100/40 text-sm">
-            © {new Date().getFullYear()} Jane Doe. All rights reserved.
+            © {new Date().getFullYear()} Arjun Kumar Samal. All rights reserved.
           </p>
           <p className="text-amber-100/40 text-sm flex items-center justify-center gap-1.5">
             Designed & Built with <Heart className="w-4 h-4 text-rose-500 fill-rose-500 animate-pulse" />
