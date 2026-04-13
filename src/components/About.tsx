@@ -1,92 +1,61 @@
 
 import React from 'react';
-import { Wallet, Code, BarChart3, Shield } from 'lucide-react';
+import { User, Code2, Database, Layout } from 'lucide-react';
 
 const skills = [
-  { name: "Blockchain Development", level: 95, icon: <Code className="w-5 h-5" /> },
-  { name: "Smart Contracts", level: 90, icon: <Wallet className="w-5 h-5" /> },
-  { name: "DeFi Protocols", level: 85, icon: <BarChart3 className="w-5 h-5" /> },
-  { name: "Web3 Security", level: 88, icon: <Shield className="w-5 h-5" /> }
+  { name: "Frontend Development", level: 95, icon: <Layout className="w-5 h-5" /> },
+  { name: "React / Next.js", level: 90, icon: <Code2 className="w-5 h-5" /> },
+  { name: "Backend APIs", level: 85, icon: <Database className="w-5 h-5" /> },
+  { name: "UI/UX Architecture", level: 88, icon: <User className="w-5 h-5" /> }
 ];
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/3023344f-0f63-42e5-9b90-465bb85ef2c8.png')`
-        }}
-      >
-        {/* Stronger dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/60"></div>
-        
-        {/* Black blur gradient on sides */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
-        
-        {/* Top gradient blend for section transition */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent"></div>
-        
-        {/* Bottom gradient blend for next section transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
-      </div>
-
-      {/* Grid pattern overlay - reduced opacity to blend with background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px'
-        }}></div>
-      </div>
+    <section id="about" className="py-24 relative overflow-hidden bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-teal-900 via-gray-900 to-black">
+      {/* Decorative gradient overlay */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-500/50 to-transparent"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 backdrop-blur-sm bg-blue-500/10 border border-blue-400/30 rounded-xl mb-6">
-              <Wallet className="w-8 h-8 text-blue-400" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Our Platform</h2>
-            <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-emerald-400 mb-6 font-sans tracking-tight">About Me</h2>
+            <div className="w-32 h-1.5 bg-gradient-to-r from-teal-400 to-emerald-600 mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white mb-6">Web3 & Blockchain Specialist</h3>
-              <p className="text-lg text-slate-300 leading-relaxed">
-                We're pioneering the future of decentralized finance with 5+ years of experience building 
-                secure blockchain solutions and innovative DeFi protocols that empower users worldwide.
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            <div className="space-y-8">
+              <h3 className="text-4xl font-bold text-white mb-6">Software Engineer & Designer</h3>
+              <p className="text-xl text-teal-100/70 leading-relaxed font-light">
+                Hello! I'm Jane, a passionate developer who loves transforming complex problems into simple, beautiful, and intuitive designs. Based in San Francisco, I've spent the last half-decade building digital products.
               </p>
-              <p className="text-lg text-slate-300 leading-relaxed">
-                Our expertise spans across smart contract development, wallet integrations, and 
-                cross-chain protocols. We've successfully deployed solutions that handle millions 
-                in transaction volume with enterprise-grade security.
+              <p className="text-xl text-teal-100/70 leading-relaxed font-light">
+                My journey in web development started back in 2018 when I built a small app for local businesses. Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, and a huge corporation.
               </p>
-              <p className="text-lg text-slate-300 leading-relaxed">
-                When we're not building the next generation of Web3 infrastructure, we're contributing to 
-                open-source protocols and educating the community about blockchain technology.
+              <p className="text-xl text-teal-100/70 leading-relaxed font-light">
+                My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.
               </p>
             </div>
             
             <div className="relative">
-              <div className="backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8">
-                <h4 className="text-xl font-bold text-white mb-6">Core Expertise</h4>
-                <div className="space-y-4">
+              {/* Glassmorphism card */}
+              <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10 shadow-2xl shadow-teal-900/20">
+                <h4 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                  <Code2 className="text-teal-400" />
+                  Technical Proficiency
+                </h4>
+                <div className="space-y-6">
                   {skills.map((skill, index) => (
-                    <div key={index} className="space-y-2">
+                    <div key={index} className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <div className="text-blue-400">{skill.icon}</div>
-                          <span className="font-medium text-white">{skill.name}</span>
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 rounded-lg bg-teal-500/20 text-teal-300">{skill.icon}</div>
+                          <span className="font-semibold text-lg text-white">{skill.name}</span>
                         </div>
-                        <span className="text-sm font-semibold text-slate-400">{skill.level}%</span>
+                        <span className="text-md font-bold text-teal-400">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-black/40 rounded-full h-3 overflow-hidden border border-white/5">
                         <div 
-                          className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000 ease-out"
+                          className="h-full bg-gradient-to-r from-teal-400 to-emerald-500 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>
@@ -98,21 +67,21 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6">
-              <div className="text-3xl font-bold text-white mb-2">$50M+</div>
-              <div className="text-slate-400">Total Value Locked</div>
+            <div className="text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300">
+              <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-500 mb-3">5+</div>
+              <div className="text-teal-100/60 font-medium uppercase tracking-widest text-sm">Years Exp.</div>
             </div>
-            <div className="text-center backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6">
-              <div className="text-3xl font-bold text-white mb-2">100+</div>
-              <div className="text-slate-400">Smart Contracts</div>
+            <div className="text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300">
+              <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-500 mb-3">50+</div>
+              <div className="text-teal-100/60 font-medium uppercase tracking-widest text-sm">Projects</div>
             </div>
-            <div className="text-center backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6">
-              <div className="text-3xl font-bold text-white mb-2">5+</div>
-              <div className="text-slate-400">Years Experience</div>
+            <div className="text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300">
+              <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-500 mb-3">15</div>
+              <div className="text-teal-100/60 font-medium uppercase tracking-widest text-sm">Clients</div>
             </div>
-            <div className="text-center backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6">
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-slate-400">Uptime</div>
+            <div className="text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300">
+              <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-500 mb-3">1M+</div>
+              <div className="text-teal-100/60 font-medium uppercase tracking-widest text-sm">Users</div>
             </div>
           </div>
         </div>

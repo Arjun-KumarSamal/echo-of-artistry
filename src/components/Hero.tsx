@@ -1,111 +1,78 @@
 import React from 'react';
-import { ArrowDown, Wallet, Shield, Globe } from 'lucide-react';
+import { ArrowRight, Code, Palette, Zap } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/2557aa55-438b-42d0-96ee-bca970aef5e5.png')`
-        }}
-      >
-        {/* Stronger dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
-        
-        {/* Bottom gradient blend for section transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-      </div>
-
-      {/* Grid pattern overlay - reduced opacity to blend with background */}
-      <div className="absolute inset-0 opacity-10">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-black">
+      {/* Decorative gradient overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-fuchsia-500/20 via-transparent to-transparent"></div>
+      
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
+          backgroundSize: '80px 80px'
         }}></div>
       </div>
       
-      {/* Floating geometric shapes */}
-      <div className="absolute top-20 right-20 w-20 h-20 border-2 border-blue-400/30 rounded-lg backdrop-blur-sm bg-blue-500/10 hidden lg:block animate-float">
-        <div className="w-full h-full flex items-center justify-center">
-          <Wallet className="w-8 h-8 text-blue-400" />
-        </div>
-      </div>
-      
-      <div className="absolute top-40 right-40 w-16 h-16 border border-blue-300/20 rounded-xl backdrop-blur-sm bg-blue-400/5 hidden lg:block animate-float" style={{animationDelay: '1s'}}>
-        <div className="w-full h-full flex items-center justify-center">
-          <Shield className="w-6 h-6 text-blue-300" />
-        </div>
-      </div>
-      
-      <div className="absolute bottom-32 left-20 w-24 h-24 border-2 border-blue-500/20 rounded-2xl backdrop-blur-sm bg-blue-600/10 hidden lg:block animate-float" style={{animationDelay: '2s'}}>
-        <div className="w-full h-full flex items-center justify-center">
-          <Globe className="w-10 h-10 text-blue-500" />
-        </div>
-      </div>
+      {/* Floating abstract elements */}
+      <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-purple-500/30 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
           <div className="mb-8">
-            <div className="text-sm text-blue-300 uppercase tracking-wider mb-4">WEB3 WALLET SOLUTIONS</div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
-              In Web 3, Several Types<br />
-              Of Wallets Exist<br />
-              <span className="text-3xl md:text-4xl font-normal text-blue-200">Within The Space.</span>
+            <div className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm text-fuchsia-200 uppercase tracking-wider mb-6">
+              CREATIVE TECHNOLOGIST
+            </div>
+            <h1 className="text-5xl md:text-8xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-fuchsia-200 to-blue-200 leading-tight">
+              Crafting Digital <br />
+              Experiences
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Web3 Wallets Have Set A New Industry Standard In Creating New 
-              Ways To Own And Manage Our Content, Identity, And Assets As We 
-              Move On Towards The Next Generation Of The Internet.
+            <p className="text-xl md:text-2xl mb-10 text-purple-100 max-w-3xl mx-auto leading-relaxed">
+              I build interactive, accessible, and inclusive digital products. 
+              Bridging the gap between design and engineering to create impactful user experiences.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 transform hover:scale-105">
-              Open Wallet
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <button className="bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-400 hover:to-purple-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-purple-500/30 transition-all duration-300 transform hover:scale-105 flex justify-center items-center gap-2">
+              View My Work <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border border-blue-400 text-blue-300 hover:bg-blue-500/10 px-8 py-4 rounded-full font-medium transition-all duration-300 transform hover:scale-105">
-              Join the Community
+            <button className="backdrop-blur-md bg-white/5 border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
+              Contact Me
             </button>
           </div>
 
           {/* Bottom cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 text-left hover:bg-slate-800/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
-                <Wallet className="w-6 h-6 text-blue-400" />
+            <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 text-left hover:bg-white/10 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Code className="w-6 h-6 text-blue-300" />
               </div>
-              <h3 className="text-white text-lg font-semibold mb-2">Standard Crypto Exchanges</h3>
-              <p className="text-slate-300 text-sm">Create and manage trading pairs and automated liquidity provision with advanced DeFi protocols.</p>
+              <h3 className="text-white text-xl font-bold mb-2">Frontend Dev</h3>
+              <p className="text-purple-200/70">Building responsive and highly interactive web applications using modern frameworks.</p>
             </div>
             
-            <div className="backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 text-left hover:bg-slate-800/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-purple-400" />
+            <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 text-left hover:bg-white/10 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-fuchsia-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Palette className="w-6 h-6 text-fuchsia-300" />
               </div>
-              <h3 className="text-white text-lg font-semibold mb-2">Decentralized Exchanges</h3>
-              <p className="text-slate-300 text-sm">Access peer-to-peer trading with enhanced security and full control over your digital assets.</p>
+              <h3 className="text-white text-xl font-bold mb-2">UI/UX Design</h3>
+              <p className="text-purple-200/70">Creating intuitive, accessible, and beautiful user interfaces that delight users.</p>
             </div>
             
-            <div className="backdrop-blur-sm bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 text-left hover:bg-slate-800/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="w-6 h-6 text-green-400" />
+            <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 text-left hover:bg-white/10 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Zap className="w-6 h-6 text-amber-300" />
               </div>
-              <h3 className="text-white text-lg font-semibold mb-2">Hot Wallets & Cold Wallets</h3>
-              <p className="text-slate-300 text-sm">Choose between convenient hot storage for daily use or secure cold storage for long-term holdings.</p>
+              <h3 className="text-white text-xl font-bold mb-2">Optimization</h3>
+              <p className="text-purple-200/70">Ensuring lightning-fast load times and smooth performance across all devices.</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-blue-400/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
@@ -113,3 +80,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
