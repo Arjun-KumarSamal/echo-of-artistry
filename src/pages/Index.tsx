@@ -10,14 +10,14 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black">
-      <Hero />
-      <About />
-      <WorkTimeline />
-      <Resume />
-      <Portfolio />
-      <EnhancedContact />
-      <Footer />
+    <div className="h-screen overflow-y-auto overflow-x-hidden snap-y snap-mandatory bg-black">
+      <div className="snap-start"><Hero /></div>
+      <div className="snap-start"><About /></div>
+      <div className="snap-start"><WorkTimeline /></div>
+      <div className="snap-start"><Resume /></div>
+      <div className="snap-start"><Portfolio /></div>
+      <div className="snap-start"><EnhancedContact /></div>
+      <div className="snap-start"><Footer /></div>
     </div>
   );
 };
